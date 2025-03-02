@@ -11,12 +11,7 @@ module.exports = {
     output: {
         publicPath: '/',
         path: path.resolve(__dirname, 'build'),
-        filename: 'js/bundle.js'
-    },
-
-    performance: {
-        hints: false, 
-
+        filename: 'main.js'
     },
 
     module: {
@@ -88,6 +83,13 @@ module.exports = {
               },
         },
         open: true,
+        client: {
+            overlay: {
+              errors: true,
+              warnings: false,
+              runtimeErrors: true,
+            },
+        },
     },
 
     plugins: [
