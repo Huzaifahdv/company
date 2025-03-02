@@ -17,7 +17,8 @@ $(function(){
     }
     );
 
-    var pathname = window.location.pathname; //إحضار المسار المتواجدين فيه 
+    // var pathname = window.location.pathname; //إحضار المسار المتواجدين فيه 
+    var pathname ='/' + window.location.pathname.split('/').slice(-1)[0];
     console.log(pathname)
     $('.navbar-nav > li > a[href="'+pathname+'"]').parent().addClass('active')
 
